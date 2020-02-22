@@ -1,11 +1,7 @@
-import app from 'apprun';
+import { app, Component } from 'apprun';
 
-const model = 'Hello world - AppRun !';
-
-const view = (state) => <div>{state}</div>;
-
-const update = {
-
+class App extends Component {
+  view = () => <div>Hello World - AppRun!</div>
 }
 
-app.start(document.body, model, view, update);
+app.render(document.body, <App />);
